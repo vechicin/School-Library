@@ -1,7 +1,7 @@
-require './person.rb'
+require './person'
 
 class Teacher < Person
-  def initialize(name = "Unkown", age, specialization, parent_permission: true)
+  def initialize(age, specialization, parent_permission: true, name = 'Unkown')
     super(name, age, parent_permission: parent_permission)
     @specialization = specialization
   end
@@ -11,5 +11,5 @@ class Teacher < Person
   end
 end
 
-domenico = Teacher.new('Domenico', 54, 'Italian')
+domenico = Teacher.new(54, 'Italian', 'Domenico')
 puts(domenico)
