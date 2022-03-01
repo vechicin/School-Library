@@ -16,7 +16,7 @@ class Person
     return false unless is_of_age? || @parent_permission
   end
 
-  def validate_name(name)
+  def validate_name(_name)
     @name = @correct_name.correct_name(@name)
   end
 
@@ -31,4 +31,3 @@ end
 
 santiago = Person.new(26, 'parangaricutirimicuaro')
 puts(santiago.validate_name(santiago.name))
-puts(santiago)
