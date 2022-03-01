@@ -1,4 +1,4 @@
-require './corrector.rb'
+require './corrector'
 
 class Person
   attr_accessor :name, :age
@@ -9,7 +9,7 @@ class Person
     @name = name
     @age = age
     @parent_permission = parent_permission
-    @correct_name = Corrector.new()
+    @correct_name = Corrector.new
   end
 
   def can_use_services?
@@ -27,7 +27,6 @@ class Person
 
     false
   end
-
 end
 
 santiago = Person.new(26, 'parangalicutirimicuaro')
