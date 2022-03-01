@@ -17,7 +17,7 @@ class Person
   end
 
   def validate_name(name)
-    @correct_name.correct_name(name)
+    @name = @correct_name.correct_name(@name)
   end
 
   private
@@ -29,5 +29,6 @@ class Person
   end
 end
 
-santiago = Person.new(26, 'parangalicutirimicuaro')
+santiago = Person.new(26, 'parangaricutirimicuaro')
 puts(santiago.validate_name(santiago.name))
+puts(santiago)
