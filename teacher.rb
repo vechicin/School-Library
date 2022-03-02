@@ -10,6 +10,3 @@ class Teacher < Person
     true
   end
 end
-
-domenico = Teacher.new('Italian', 54, 'Domenico')
-puts(domenico)
