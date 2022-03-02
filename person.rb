@@ -28,6 +28,3 @@ class Person
     false
   end
 end
-
-santiago = Person.new(26, 'parangaricutirimicuaro')
-puts(santiago.validate_name(santiago.name))
