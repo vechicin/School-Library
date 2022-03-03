@@ -53,7 +53,7 @@ class App
       p 'There are currently no people, please add a new person'
     else
       @people.each do |person|
-        p "Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+        p "Position: #{person.class.name}, Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
       end
     end
     puts ''
@@ -118,7 +118,7 @@ class App
     book = @books[gets.chomp.to_i]
     p 'Please select the person who is renting the book'
     @people.each_with_index do |person, id|
-      p "#{id}. Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+      p "#{id}. Position: #{person.class.name}, Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
     person = @people[gets.chomp.to_i]
     p 'Date of rental (yyyy-mm-dd): '
