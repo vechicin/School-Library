@@ -10,7 +10,7 @@ class App
 
   def initialize
     @options = ['List all books', 'List all people', 'Create a person', 'Create a book', 'Create a rental',
-    'List all rentals for a given person id', 'Exit']
+                'List all rentals for a given person id', 'Exit']
     @books = []
     @people = []
     @rentals = []
@@ -25,7 +25,7 @@ class App
     execute(choice)
   end
 
-  def execute(choice)
+  def execute(choice) # rubocop:disable Metrics/CyclomaticComplexity
     case choice
     when '1' then booklist
     when '2' then people
@@ -64,9 +64,9 @@ class App
     p 'Is this person a student(1) or a teacher(2)?'
     choice = gets.chomp
     case choice
-      when '1' then new_student
-      when '2' then new_teacher
-      else p 'Please enter a valid input, it must be the number 1 or the number 2' 
+    when '1' then new_student
+    when '2' then new_teacher
+    else p 'Please enter a valid input, it must be the number 1 or the number 2'
     end
   end
 
@@ -140,7 +140,8 @@ class App
           person.rentals.each do |rental|
             p "Date of rental: #{rental.date}, Title: #{rental.book.title}, Author: #{rental.book.author}"
           end
-        else p 'There are no rentals for that id'
+        else
+          p 'There are no rentals for that id'
         end
       end
     end
