@@ -135,7 +135,7 @@ class App
     else
       p "Enter person's id: "
       id = gets.chomp.to_i
-      @people.each do |person|
+      people.each do |person|
         if person.id == id
           person.rentals.each do |rental|
             p "Date of rental: #{rental.date}, Title: #{rental.book.title}, Author: #{rental.book.author}"
